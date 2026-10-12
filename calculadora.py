@@ -12,6 +12,9 @@ def dividir(a, b):
         return "Error: No se puede dividir entre cero."
     return a / b
 
+def potencia(a, b):
+    return a ** b
+
 def main():
     while True:
         print("\n=== Calculadora Sencilla ===")
@@ -19,15 +22,16 @@ def main():
         print("2. Restar")
         print("3. Multiplicar")
         print("4. Dividir")
-        print("5. Salir")
+        print("5. Potencia")
+        print("6. Salir")
         
-        opcion = input("Elige una opción (1-5): ").strip()
+        opcion = input("Elige una opción (1-6): ").strip()
         
-        if opcion == "5":
+        if opcion == "6":
             print("¡Hasta luego!")
             break
             
-        if opcion not in {"1", "2", "3", "4"}:
+        if opcion not in {"1", "2", "3", "4", "5"}:
             print("Opción no válida. Intenta de nuevo.")
             continue
             
@@ -50,6 +54,8 @@ def main():
                 print(resultado)
             else:
                 print(f"Resultado: {num1} / {num2} = {resultado}")
+        elif opcion == "5":
+            print(f"Resultado: {num1} ^ {num2} = {potencia(num1, num2)}")
 
 if __name__ == "__main__":
     main()
