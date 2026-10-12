@@ -1,0 +1,6 @@
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+
+# macOS / editor
+.DS_Store
